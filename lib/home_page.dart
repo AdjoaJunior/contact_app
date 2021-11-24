@@ -72,7 +72,7 @@ class HomePage extends StatelessWidget {
                     backgroundImage: AssetImage('Assets/828.jpg'),
                   ),
                   title:const Text( 
-                    'MaaAdjoa',
+                    'Maa Adjoa',
                     style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
                   ),
                   subtitle:const Text('+233 247 187 804'),
@@ -115,7 +115,7 @@ class HomePage extends StatelessWidget {
                       backgroundImage: AssetImage('Assets/828.jpg'),
                     ),
                     title:const Text(
-                      'MaaAdjoa',
+                      'Maa Adjoa',
                       style:
                           TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
                     ),
@@ -144,23 +144,28 @@ class HomePage extends StatelessWidget {
             ListView.separated(
                 shrinkWrap: true,
                 itemBuilder: (context, index) {
-                  return const ListTile(
-                    leading: CircleAvatar(
+                  return  ListTile(
+                    onTap:(){
+                      Navigator.of(context).push(MaterialPageRoute(builder:(BuildContext context){
+                        return const ContactView();
+                      }));
+                    }, 
+                    leading:const CircleAvatar(
                       backgroundImage: AssetImage('Assets/828.jpg'),
                     ),
-                    title: Text(
-                      'MaaAdjoa',
+                    title:const Text(
+                      'Maa Adjoa',
                       style:
                           TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
                     ),
-                    subtitle: Text('+233 247 187 804'),
-                    trailing: Icon(
+                    subtitle:const Text('+233 247 187 804'),
+                    trailing:const Icon(
                       Icons.more_horiz,
                       size: 28,
                     ),
                   );
                 },
-                separatorBuilder: (context, index) {
+                separatorBuilder: (BuildContext context, int index) {
                   return const SizedBox(
                     height: 8,
                   );
