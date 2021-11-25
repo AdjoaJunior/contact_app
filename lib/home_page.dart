@@ -5,7 +5,54 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  HomePage({Key? key}) : super(key: key);
+
+  final List<Map<String,String>> data =[
+     {
+      "name":"Regan Kwame",
+       "phone":"+233 333 444 567",
+       "email":"someone@example.com",
+       "country":"Ghana",
+       "region":"Ashanti",
+     },
+     {
+       "name":"Dede Ayew",
+       "phone":"+235 333 444 567",
+       "email":"someone@example.com",
+       "country":"Nigeria",
+       "region":"Abuja"
+     },
+      {
+       "name":"Austin Baby",
+       "phone":"+567 333 444 567",
+       "email":"someone@example.com",
+       "country":"Mali",
+       "region":"Bamako"
+     },
+     {
+      "name":"Austin Baby",
+       "phone":"+277 333 444 567",
+       "email":"someone@example.com",
+      "country":"Ethiopia",
+      "region":"Addis Ababa"
+     },
+     {
+       "name":"Austin Baby",
+       "phone":"+333 333 444 567",
+       "email":"someone@example.com",
+       "country":"Ethiopia",
+       "region":"Addis Ababa"
+     },
+     {
+       "name":"Austin Baby",
+       "phone":"+234 333 444 567",
+       "email":"someone@example.com",
+      "country":"Ghana",
+       "region":"Volta"
+     },
+    ];
+
+  
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +64,8 @@ class HomePage extends StatelessWidget {
         title: const Text(
           'My Contact',
           style: TextStyle(
-              color: Colors.black, fontSize: 20, fontWeight: FontWeight.w600),
+              color: Colors.black, fontSize: 20,
+               fontWeight: FontWeight.w600),
         ),
         actions: const [
           Padding(
