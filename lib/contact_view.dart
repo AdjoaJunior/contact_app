@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'contact_model.dart';
 
 class ContactView extends StatelessWidget {
-  const ContactView({Key? key}) : super(key: key);
-
+  const ContactView({Key? key,required this.contact}) : super(key: key);
+final Contact contact;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,19 +30,19 @@ class ContactView extends StatelessWidget {
           const SizedBox(
             height: 15,
           ),
-          const Center(
+           Center(
             child: Text(
-              'Adjoa Animah',
-              style: TextStyle(
+             contact.name,
+              style:const TextStyle(
                   color: Colors.black,
                   fontSize: 25,
                   fontWeight: FontWeight.w600),
             ),
           ),
-          const Center(
+           Center(
             child: Text(
-              'Accra Ghana',
-              style: TextStyle(fontSize: 19),
+              '${contact.region}, ${contact.country}',
+              style:const TextStyle(fontSize: 19),
             ),
           ),
           const SizedBox(
@@ -58,7 +59,7 @@ class ContactView extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                subtitle: const Text('+247 333 44 56777'),
+                subtitle: Text(contact.phone),
                 trailing: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -95,7 +96,7 @@ class ContactView extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                subtitle: const Text('estagyemang7804@gmail.com'),
+                subtitle:  Text(contact.email),
                 trailing: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
